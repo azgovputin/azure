@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "yiha-0e58"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "yiha-0e58"
+  template:
+    metadata:
+      labels:
+        app: "yiha-0e58"
+    spec:
+      containers:
+        - name: "yiha-0e58"
+          image: "tessy.azurecr.io/yiha"
+          ports:
+          - containerPort: 80
